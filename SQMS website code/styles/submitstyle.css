@@ -1,0 +1,103 @@
+/* La Salle Themed Style */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f1; /* Light greenish white */
+    margin: 0;
+    padding: 0;
+}
+
+.container-result {
+    max-width: 600px;
+    margin: 80px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 102, 51, 0.2); /* La Salle green tone */
+    text-align: center;
+    border-top: 10px solid #006633; /* La Salle green */
+}
+
+.container-result h3 {
+    color: #006633; /* La Salle green */
+    margin-bottom: 20px;
+}
+
+.container-result p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.container-result strong {
+    color: #006633;
+}
+
+.container-result a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #006633;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.container-result a:hover {
+    background-color: #004d26;
+}
+
+#loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-green) 0%, #005a32 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.loader-spinner {
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.loader-text {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+

@@ -1,0 +1,262 @@
+/* style.css – La Salle Themed Styles (Enhanced) */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.navbar {
+    background: var(--dark-green-gradient) !important;
+    box-shadow: 0 4px 20px var(--shadow-light);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border-bottom: 3px solid var(--accent-green);
+}
+
+.navbar-brand {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    font-weight: 700;
+    background: linear-gradient(45deg, #ffffff, var(--accent-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 3px 12px rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand i {
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+    color: var(--accent-green);
+    margin-right: 0.5rem;
+}
+
+
+.nav-link {
+    font-weight: 500;
+    color: #ffffff !important;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 30px;
+    margin: 0 0.35rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link i {
+    margin-right: 0.5rem;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
+    text-decoration: none;
+}
+
+/* Card Enhancements */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow-medium);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background: var(--dark-green-gradient);
+    border-bottom: none;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-header h2 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.card-header p {
+    color: var(--accent-green);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.card-title {
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.form-label {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--accent-green);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.25rem rgba(0, 116, 63, 0.25);
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-green);
+    border-color: #006233;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+.btn-primary:hover {
+    background-color: #005a32;
+    border-color: #004d2a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--shadow-medium);
+}
+
+.btn-primary i {
+    margin-right: 0.5rem;
+}
+
+/* Loader Enhancements */
+#loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--primary-green) 0%, #005a32 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.loader-spinner {
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.loader-text {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2C3E50 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--primary-green);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .nav-link {
+        padding: 0.4rem 0.8rem !important;
+        text-align: center;
+    }
+
+    .card-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .loader-spinner {
+        width: 50px;
+        height: 50px;
+    }
+
+    .loader-text {
+        font-size: 1.1rem;
+    }
+}
+
+.forgot-password-link {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.forgot-password-link:hover {
+    color: #005a32;
+    text-decoration: underline;
+}
+
+.modal-header {
+    background: var(--dark-green-gradient);
+    color: white;
+    border-bottom: none;
+}
+
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+.password-strength {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.strength-weak {
+    color: #dc3545;
+}
+
+.strength-medium {
+    color: #ffc107;
+}
+
+.strength-strong {
+    color: #28a745;
+}
